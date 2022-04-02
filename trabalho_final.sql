@@ -76,20 +76,17 @@ CREATE TABLE "produto" (
  );
 
 
-alter table funcionario add CONSTRAINT "FK_produto.codigo_funcionario" FOREIGN KEY ("codigo_funcionario")
- REFERENCES "produto"("codigo_produto"); 
+alter table produto add CONSTRAINT "FK_produto.codigo_funcionario" FOREIGN KEY ("codigo_funcionario")
+ REFERENCES "funcionario"("codigo_funcionario"); 
 
-alter table telefone add CONSTRAINT "FK_cliente.codigo_telefone" FOREIGN KEY ("codigo_telefone")
- REFERENCES "cliente"("codigo_cliente"); 
+alter table cliente add CONSTRAINT "FK_cliente.codigo_endereco" FOREIGN KEY ("codigo_endereco")
+ REFERENCES "endereco_cliente"("codigo_endereco"); 
 
-alter table endereco_cliente add CONSTRAINT "FK_cliente.codigo_endereco" FOREIGN KEY ("codigo_endereco")
- REFERENCES "cliente"("codigo_cliente"); 
-
-alter table categoria add CONSTRAINT "FK_produto.codigo_categoria" FOREIGN KEY ("codigo_categoria")
- REFERENCES "produto"("codigo_produto"); 
+alter table produto add CONSTRAINT "FK_produto.codigo_categoria" FOREIGN KEY ("codigo_categoria")
+ REFERENCES "categoria"("codigo_categoria"); 
  
-alter table produto add CONSTRAINT "FK_item_compra.codigo_produto" FOREIGN KEY ("codigo_produto")
- REFERENCES "item_compra"("codigo_item"); 
+alter table item_compra add CONSTRAINT "FK_item_compra.codigo_produto" FOREIGN KEY ("codigo_produto")
+ REFERENCES "produto"("codigo_produto"); 
 
-alter table item_compra add CONSTRAINT "FK_pedido.codigo_item" FOREIGN KEY ("codigo_item")
- REFERENCES "pedido"("codigo_pedido"); 
+alter table pedido add CONSTRAINT "FK_pedido.codigo_item" FOREIGN KEY ("codigo_item")
+ REFERENCES "item_compra"("codigo_item"); 
