@@ -101,6 +101,7 @@ insert into "funcionario" (nome_funcionario, cpf_funcionario, salario) values('R
 insert into "funcionario" (nome_funcionario, cpf_funcionario, salario) values('Ariane', 44455566699, 4000);
 insert into "funcionario" (nome_funcionario, cpf_funcionario, salario) values('Douglas',55566699988, 4500);
 
+
 alter table telefone rename to telefone_cliente;
 alter table cliente add CONSTRAINT "FK_cliente.codigo_telefone" FOREIGN KEY ("codigo_telefone") REFERENCES "telefone_cliente"("codigo_telefone");
 alter table telefone_cliente rename column telefone_principal to ddd_principal
@@ -124,13 +125,13 @@ values (21, 998889990, 21, 26435345);
 insert into telefone_cliente (ddd_principal, telefone_principal, ddd_secundario, telefone_secundario) 
 values (21, 998889991, 21, 26435346);
 insert into endereco_cliente (cep, rua, numero, complemento, bairro, cidade, estado) 
-values (25960550, 'Rua Rui Barbosa', 200, ' ' , 'Agriões', 'Teresópolis', 'RJ');
+values (25960550, 'Rua Rui Barbosa', 200, ' ' , 'Agriï¿½es', 'Teresï¿½polis', 'RJ');
 insert into endereco_cliente (cep, rua, numero, complemento, bairro, cidade, estado) 
-values (25960555, 'Av. Slooper', 1500, 'casa 01' , 'Alto', 'Teresópolis', 'RJ');
+values (25960555, 'Av. Slooper', 1500, 'casa 01' , 'Alto', 'Teresï¿½polis', 'RJ');
 insert into endereco_cliente (cep, rua, numero, complemento, bairro, cidade, estado) 
-values (25960552, 'Rua Parana', 10, ' ', 'Centro', 'Teresópolis', 'RJ');
+values (25960552, 'Rua Parana', 10, ' ', 'Centro', 'Teresï¿½polis', 'RJ');
 insert into endereco_cliente (cep, rua, numero, complemento, bairro, cidade, estado) 
-values (25960560, 'Av. Lucio Meira', 1830, 'ap. 502' , 'Barra', 'Teresópolis', 'RJ');
+values (25960560, 'Av. Lucio Meira', 1830, 'ap. 502' , 'Barra', 'Teresï¿½polis', 'RJ');
 insert into cliente (nome, sobrenome, login, senha, email_cliente, cpf_cliente, data_nascimento, codigo_telefone, codigo_endereco) 
 values ('Jose', 'Ferreira', 'jose', 'j12345' , 'jose@gmail.com', 07635687920, '1990-10-10', 1, 1);
 insert into cliente (nome, sobrenome, login, senha, email_cliente, cpf_cliente, data_nascimento, codigo_telefone, codigo_endereco) 
@@ -139,6 +140,7 @@ insert into cliente (nome, sobrenome, login, senha, email_cliente, cpf_cliente, 
 values ('Flavio', 'Malone', 'flavio', 'f12345' , 'flavio@gmail.com', 97635687920, '1977-01-5', 3, 3);
 insert into cliente (nome, sobrenome, login, senha, email_cliente, cpf_cliente, data_nascimento, codigo_telefone, codigo_endereco) 
 values ('Renata', 'Castro', 'renata', 'r12345' , 'renata@gmail.com', 94565687920, '1980-07-09', 4, 4);
+
 
 
 
