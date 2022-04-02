@@ -82,8 +82,10 @@ alter table produto add CONSTRAINT "FK_produto.codigo_funcionario" FOREIGN KEY (
 alter table cliente add CONSTRAINT "FK_cliente.codigo_endereco" FOREIGN KEY ("codigo_endereco")
  REFERENCES "endereco_cliente"("codigo_endereco"); 
 
+
 alter table "categoria" add CONSTRAINT "FK_categoria.codigo_produto" FOREIGN KEY ("codigo_produto")
  REFERENCES "produto"("codigo_produto");
+
  
 alter table item_compra add CONSTRAINT "FK_item_compra.codigo_produto" FOREIGN KEY ("codigo_produto")
  REFERENCES "produto"("codigo_produto"); 
@@ -91,9 +93,11 @@ alter table item_compra add CONSTRAINT "FK_item_compra.codigo_produto" FOREIGN K
 alter table pedido add CONSTRAINT "FK_pedido.codigo_item" FOREIGN KEY ("codigo_item")
  REFERENCES "item_compra"("codigo_item"); 
 
+
 insert into "funcionario" (nome_funcionario, cpf_funcionario, salario) values('Thiago', 99988877700, 2000);
 insert into "funcionario" (nome_funcionario, cpf_funcionario, salario) values('Andrea', 11122233366, 2500);
 insert into "funcionario" (nome_funcionario, cpf_funcionario, salario) values('Vanessa',22233366655, 3000);
 insert into "funcionario" (nome_funcionario, cpf_funcionario, salario) values('Ricardo',33344455566, 3500);
 insert into "funcionario" (nome_funcionario, cpf_funcionario, salario) values('Ariane', 44455566699, 4000);
 insert into "funcionario" (nome_funcionario, cpf_funcionario, salario) values('Douglas',55566699988, 4500);
+
