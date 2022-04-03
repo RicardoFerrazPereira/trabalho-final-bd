@@ -115,6 +115,15 @@ alter table endereco_cliente add column complemento varchar(15);
 alter table endereco_cliente add column bairro varchar(20) not null;
 alter table endereco_cliente add column cidade varchar(20) not null;
 alter table endereco_cliente add column estado varchar(2) not null;
+alter table cliente alter column cpf_cliente type char(11);
+alter table telefone_cliente alter column telefone_principal type char(9); 
+ALTER TABLE telefone_cliente ALTER COLUMN telefone_secundario TYPE char(9);
+ALTER TABLE telefone_cliente ALTER COLUMN ddd_principal TYPE char(2); 
+ALTER TABLE telefone_cliente ALTER COLUMN ddd_secundario TYPE char(2); 
+alter table funcionario alter column cpf_funcionario type char(11);
+alter table produto alter column valor_unitario type money;
+
+
 
 insert into telefone_cliente (ddd_principal, telefone_principal, ddd_secundario, telefone_secundario) 
 values (21, 998889988, 21, 26435343);
@@ -175,4 +184,8 @@ insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_un
 values('Enquanto Infinity',16,'2022-01-10',99.99,'2022-04-02',4);
 insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario)
 values('Save the Programmer',9,'2022-01-10',149.99,'2022-04-02',5);
+
+insert into "categoria" (nome_categoria, codigo_produto) values('Jogos', 1);
+insert into "categoria" (nome_categoria, codigo_produto) values('Console', 2);
+insert into "categoria" (nome_categoria, codigo_produto) values('Acessórios',3);
 
