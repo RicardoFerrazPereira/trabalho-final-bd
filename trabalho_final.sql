@@ -143,4 +143,18 @@ values ('Renata', 'Castro', 'renata', 'r12345' , 'renata@gmail.com', 94565687920
 
 
 
+insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario)
+values('Pc Serratec', 3,'2022-02-22',2499.99,'2022-04-02',6 );
+insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario)
+values('Serra Station 8',4,'2022-02-02',5499.99,'2022-04-02',5);
+insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario)
+values('Super L�gica',2,'2022-02-10',3499.99,'2022-04-02',3);
+insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario)
+values('N�o Entendo Switch',5,'2022-02-10',2499.99,'2022-04-02',6);
+insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario)
+values('Serra Drive',1,'2022-02-10',1099.99,'2022-04-02',1);
+
+
+
+
 
