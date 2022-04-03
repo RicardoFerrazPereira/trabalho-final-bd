@@ -154,7 +154,16 @@ values('Nï¿½o Entendo Switch',5,'2022-02-10',2499.99,'2022-04-02',6);
 insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario)
 values('Serra Drive',1,'2022-02-10',1099.99,'2022-04-02',1);
 
-
+insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario)
+values('Controle sem fio paçoquinha++', 10,'2021-04-03',180.99,'2022-04-03',2);
+insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario)
+values('Teclado de jogos variáveis infinitas', 15,'2021-01-10',149.99,'2022-04-03',1);
+insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario)
+values('Progdragão',20,'2021-05-10',59.99,'2022-04-03',3);
+insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario)
+values('Mouse Gamer limpa +rápido',17,'2021-06-15',99.99,'2022-04-03',4);
+insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario)
+values('Livro * No final tudo da certo *',25,'2020-01-22',49.99,'2022-04-03',5);
 
 
 
