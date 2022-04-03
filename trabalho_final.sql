@@ -165,5 +165,14 @@ values('Mouse Gamer limpa +rápido',17,'2021-06-15',99.99,'2022-04-03',4);
 insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario)
 values('Livro * No final tudo da certo *',25,'2020-01-22',49.99,'2022-04-03',5);
 
-
+insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario)
+values('SerratecAdventure', 5,'2022-01-10',199.99,'2022-04-02',1);
+insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario)
+values('Zepa Conquest', 2,'2022-01-10',299.99,'2022-04-02',2);
+insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario)
+values('Limpa',20,'2022-01-10',79.99,'2022-04-02',3);
+insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario)
+values('Enquanto Infinity',16,'2022-01-10',99.99,'2022-04-02',4);
+insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario)
+values('Save the Programmer',9,'2022-01-10',149.99,'2022-04-02',5);
 
