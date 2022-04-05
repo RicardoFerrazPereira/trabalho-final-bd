@@ -117,7 +117,6 @@ alter table endereco_cliente drop column bairro;
 alter table endereco_cliente drop column cidade; 
 alter table endereco_cliente drop column estado;
 
-alter table endereco_cliente add column cep integer not null;
 alter table endereco_cliente add column rua varchar(30) not null;
 alter table endereco_cliente add column numero integer not null;
 alter table endereco_cliente add column complemento varchar(15);
@@ -166,6 +165,9 @@ values ('Renata', 'Castro', 'renata', 'r12345' , 'renata@gmail.com', 94565687920
 insert into "categoria" (nome_categoria) values('Jogos');
 insert into "categoria" (nome_categoria) values('Console');
 insert into "categoria" (nome_categoria) values('Acessórios');
+insert into "categoria" (nome_categoria) values('livros');   
+insert into "categoria" (nome_categoria) values('Camisetas'); 
+insert into "categoria" (nome_categoria) values('Adesivos');
 
 --inserindo dados dos produtos
 insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario, codigo_categoria)
