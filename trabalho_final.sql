@@ -134,8 +134,6 @@ ALTER TABLE telefone_cliente ALTER COLUMN ddd_principal TYPE char(2);
 ALTER TABLE telefone_cliente ALTER COLUMN ddd_secundario TYPE char(2); 
 alter table funcionario alter column cpf_funcionario type char(11);
 alter table produto alter column valor_unitario type money;
-ALTER TABLE funcionario ALTER COLUMN salario TYPE money;
-
 
 --inserindo dados dos clientes
 insert into telefone_cliente (ddd_principal, telefone_principal, ddd_secundario, telefone_secundario) 
