@@ -75,7 +75,7 @@ CREATE TABLE "produto" (
   PRIMARY KEY ("codigo_produto")
  );
 
---modifica��o dos atributos
+--modificação dos atributos
 alter table produto add column codigo_categoria integer not null;
 alter table categoria drop column codigo_produto; 
 alter table pedido drop column codigo_item;
@@ -86,14 +86,16 @@ alter table produto add CONSTRAINT "FK_produto.codigo_funcionario" FOREIGN KEY (
  REFERENCES "funcionario"("codigo_funcionario"); 
 alter table cliente add CONSTRAINT "FK_cliente.codigo_endereco" FOREIGN KEY ("codigo_endereco")
  REFERENCES "endereco_cliente"("codigo_endereco"); 
+
 alter table produto add CONSTRAINT "FK_categoria.codigo_codigo_categoria" FOREIGN KEY ("codigo_categoria")
  REFERENCES "categoria"("codigo_categoria");
+
 alter table item_compra add CONSTRAINT "FK_item_compra.codigo_produto" FOREIGN KEY ("codigo_produto")
  REFERENCES "produto"("codigo_produto"); 
 alter table item_compra add CONSTRAINT "FK_item_compra.codigo_pedido" FOREIGN KEY ("codigo_pedido")
  REFERENCES "pedido"("codigo_pedido"); 
 
---inserindo dados dos funcion�rios
+--inserindo dados dos funcionários
 insert into "funcionario" (nome_funcionario, cpf_funcionario, salario) values('Thiago', 99988877700, 2000);
 insert into "funcionario" (nome_funcionario, cpf_funcionario, salario) values('Andrea', 11122233366, 2500);
 insert into "funcionario" (nome_funcionario, cpf_funcionario, salario) values('Vanessa',22233366655, 3000);
@@ -101,7 +103,7 @@ insert into "funcionario" (nome_funcionario, cpf_funcionario, salario) values('R
 insert into "funcionario" (nome_funcionario, cpf_funcionario, salario) values('Ariane', 44455566699, 4000);
 insert into "funcionario" (nome_funcionario, cpf_funcionario, salario) values('Douglas',55566699988, 4500);
 
---modifica��o dos atributos
+--modificação dos atributos
 alter table telefone rename to telefone_cliente;
 alter table cliente add CONSTRAINT "FK_cliente.codigo_telefone" FOREIGN KEY ("codigo_telefone") REFERENCES "telefone_cliente"("codigo_telefone");
 alter table telefone_cliente rename column telefone_principal to ddd_principal;
@@ -123,7 +125,7 @@ alter table endereco_cliente add column bairro varchar(20) not null;
 alter table endereco_cliente add column cidade varchar(20) not null;
 alter table endereco_cliente add column estado varchar(2) not null;
 
---altera��o dos tipos de dados
+--alteração dos tipos de dados
 alter table cliente alter column cpf_cliente type char(11);
 alter table telefone_cliente alter column telefone_principal type char(9); 
 ALTER TABLE telefone_cliente ALTER COLUMN telefone_secundario TYPE char(9);
@@ -144,13 +146,13 @@ values (21, 998889990, 21, 26435345);
 insert into telefone_cliente (ddd_principal, telefone_principal, ddd_secundario, telefone_secundario) 
 values (21, 998889991, 21, 26435346);
 insert into endereco_cliente (cep, rua, numero, complemento, bairro, cidade, estado) 
-values (25960550, 'Rua Rui Barbosa', 200, ' ' , 'Agri�es', 'Teres�polis', 'RJ');
+values (25960550, 'Rua Rui Barbosa', 200, ' ' , 'Agriï¿½es', 'Teresï¿½polis', 'RJ');
 insert into endereco_cliente (cep, rua, numero, complemento, bairro, cidade, estado) 
-values (25960555, 'Av. Slooper', 1500, 'casa 01' , 'Alto', 'Teres�polis', 'RJ');
+values (25960555, 'Av. Slooper', 1500, 'casa 01' , 'Alto', 'Teresï¿½polis', 'RJ');
 insert into endereco_cliente (cep, rua, numero, complemento, bairro, cidade, estado) 
-values (25960552, 'Rua Parana', 10, ' ', 'Centro', 'Teres�polis', 'RJ');
+values (25960552, 'Rua Parana', 10, ' ', 'Centro', 'Teresï¿½polis', 'RJ');
 insert into endereco_cliente (cep, rua, numero, complemento, bairro, cidade, estado) 
-values (25960560, 'Av. Lucio Meira', 1830, 'ap. 502' , 'Barra', 'Teres�polis', 'RJ');
+values (25960560, 'Av. Lucio Meira', 1830, 'ap. 502' , 'Barra', 'Teresï¿½polis', 'RJ');
 insert into cliente (nome, sobrenome, login, senha, email_cliente, cpf_cliente, data_nascimento, codigo_telefone, codigo_endereco) 
 values ('Jose', 'Ferreira', 'jose', 'j12345' , 'jose@gmail.com', 07635687920, '1990-10-10', 1, 1);
 insert into cliente (nome, sobrenome, login, senha, email_cliente, cpf_cliente, data_nascimento, codigo_telefone, codigo_endereco) 
@@ -163,7 +165,7 @@ values ('Renata', 'Castro', 'renata', 'r12345' , 'renata@gmail.com', 94565687920
 --inserindo dados das categorias
 insert into "categoria" (nome_categoria) values('Jogos');
 insert into "categoria" (nome_categoria) values('Console');
-insert into "categoria" (nome_categoria) values('Acess�rios');
+insert into "categoria" (nome_categoria) values('Acessórios');
 
 --inserindo dados dos produtos
 insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario, codigo_categoria)
@@ -171,20 +173,20 @@ values('Pc Serratec', 3,'2022-02-22',2499.99,'2022-04-02',6 , 2 );
 insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario, codigo_categoria)
 values('Serra Station 8',4,'2022-02-02',5499.99,'2022-04-02',5, 2);
 insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario, codigo_categoria)
-values('Super L�gica',2,'2022-02-10',3499.99,'2022-04-02',3, 2);
+values('Super Lï¿½gica',2,'2022-02-10',3499.99,'2022-04-02',3, 2);
 insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario, codigo_categoria)
-values('N�o Entendo Switch',5,'2022-02-10',2499.99,'2022-04-02',6, 2);
+values('Nï¿½o Entendo Switch',5,'2022-02-10',2499.99,'2022-04-02',6, 2);
 insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario, codigo_categoria)
 values('Serra Drive',1,'2022-02-10',1099.99,'2022-04-02',1, 2);
 
 insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario, codigo_categoria)
-values('Controle sem fio pa�oquinha++', 10,'2021-04-03',180.99,'2022-04-03',2, 3);
+values('Controle sem fio paçoquinha++', 10,'2021-04-03',180.99,'2022-04-03',2, 3);
 insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario, codigo_categoria)
-values('Teclado de jogos vari�veis infinitas', 15,'2021-01-10',149.99,'2022-04-03',1, 3);
+values('Teclado de jogos variáveis infinitas', 15,'2021-01-10',149.99,'2022-04-03',1, 3);
 insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario, codigo_categoria)
-values('Progdrag�o',20,'2021-05-10',59.99,'2022-04-03',3, 3);
+values('Progdragão',20,'2021-05-10',59.99,'2022-04-03',3, 3);
 insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario, codigo_categoria)
-values('Mouse Gamer limpa +r�pido',17,'2021-06-15',99.99,'2022-04-03',4, 3);
+values('Mouse Gamer limpa +rápido',17,'2021-06-15',99.99,'2022-04-03',4, 3);
 insert into produto (nome_produto, quantidade_estoque, data_fabricacao, valor_unitario,data_cadastro,codigo_funcionario, codigo_categoria)
 values('Livro * No final tudo da certo *',25,'2020-01-22',49.99,'2022-04-03',5, 3);
 
