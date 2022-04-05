@@ -76,3 +76,10 @@ select salario, nome_funcionario from funcionario;
 
 update cliente set email_cliente = 'jose_novoemail@gmail.com' where codigo_cliente = 1;
 
+update telefone_cliente set telefone_principal = '990475364' where codigo_telefone = 1;
+
+/*6*/
+
+alter table pedido drop constraint "FK_pedido.codigo_cliente";
+delete from cliente where nome like '%e%' or length(senha)<4;
+
