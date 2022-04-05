@@ -102,6 +102,8 @@ insert into "funcionario" (nome_funcionario, cpf_funcionario, salario) values('V
 insert into "funcionario" (nome_funcionario, cpf_funcionario, salario) values('Ricardo',33344455566, 3500);
 insert into "funcionario" (nome_funcionario, cpf_funcionario, salario) values('Ariane', 44455566699, 4000);
 insert into "funcionario" (nome_funcionario, cpf_funcionario, salario) values('Douglas',55566699988, 4500);
+insert into "funcionario" (nome_funcionario, cpf_funcionario, salario) values('Debora',55589699988, null);
+
 
 --modificação dos atributos
 alter table telefone rename to telefone_cliente;
@@ -144,6 +146,11 @@ insert into telefone_cliente (ddd_principal, telefone_principal, ddd_secundario,
 values (21, 998889990, 21, 26435345);
 insert into telefone_cliente (ddd_principal, telefone_principal, ddd_secundario, telefone_secundario) 
 values (21, 998889991, 21, 26435346);
+insert into telefone_cliente (ddd_principal, telefone_principal, ddd_secundario, telefone_secundario) 
+values (22, 994589991, null, null);
+insert into telefone_cliente (ddd_principal, telefone_principal, ddd_secundario, telefone_secundario) 
+values (24, 998889771, null, null);
+
 insert into endereco_cliente (cep, rua, numero, complemento, bairro, cidade, estado) 
 values (25960550, 'Rua Rui Barbosa', 200, ' ' , 'Agriï¿½es', 'Teresï¿½polis', 'RJ');
 insert into endereco_cliente (cep, rua, numero, complemento, bairro, cidade, estado) 
@@ -152,6 +159,11 @@ insert into endereco_cliente (cep, rua, numero, complemento, bairro, cidade, est
 values (25960552, 'Rua Parana', 10, ' ', 'Centro', 'Teresï¿½polis', 'RJ');
 insert into endereco_cliente (cep, rua, numero, complemento, bairro, cidade, estado) 
 values (25960560, 'Av. Lucio Meira', 1830, 'ap. 502' , 'Barra', 'Teresï¿½polis', 'RJ');
+insert into endereco_cliente (cep, rua, numero, complemento, bairro, cidade, estado) 
+values (25960950, 'Av. Oliveira Botelho', 630, null , 'Alto', 'Petropolis', 'RJ');
+insert into endereco_cliente (cep, rua, numero, complemento, bairro, cidade, estado) 
+values (25970560, 'Rua das Flores', 30, null , 'Olaria', 'Nova Friburgo', 'RJ');
+
 insert into cliente (nome, sobrenome, login, senha, email_cliente, cpf_cliente, data_nascimento, codigo_telefone, codigo_endereco) 
 values ('Jose', 'Ferreira', 'jose', 'j12345' , 'jose@gmail.com', 07635687920, '1990-10-10', 1, 1);
 insert into cliente (nome, sobrenome, login, senha, email_cliente, cpf_cliente, data_nascimento, codigo_telefone, codigo_endereco) 
@@ -160,6 +172,11 @@ insert into cliente (nome, sobrenome, login, senha, email_cliente, cpf_cliente, 
 values ('Flavio', 'Malone', 'flavio', 'f12345' , 'flavio@gmail.com', 97635687920, '1977-01-5', 3, 3);
 insert into cliente (nome, sobrenome, login, senha, email_cliente, cpf_cliente, data_nascimento, codigo_telefone, codigo_endereco) 
 values ('Renata', 'Castro', 'renata', 'r12345' , 'renata@gmail.com', 94565687920, '1980-07-09', 4, 4);
+insert into cliente (nome, sobrenome, login, senha, email_cliente, cpf_cliente, data_nascimento, codigo_telefone, codigo_endereco) 
+values ('Ricardo', 'Gomes', 'ricardo', 'r12345' , 'ricardo@gmail.com', 94565667920, '1985-08-09', 5, 5);
+insert into cliente (nome, sobrenome, login, senha, email_cliente, cpf_cliente, data_nascimento, codigo_telefone, codigo_endereco) 
+values ('Carla', 'Souza', 'carla', 'c12345' , 'carla@gmail.com', 94566687920, '1986-10-8', 6, 6);
+
 
 --inserindo dados das categorias
 insert into "categoria" (nome_categoria) values('Jogos');
