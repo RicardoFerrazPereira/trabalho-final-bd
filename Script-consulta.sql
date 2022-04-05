@@ -62,3 +62,11 @@ order by salario desc
 limit 3
 offset 1;
 
+/bonus/
+select nome_funcionario, salario as salario_atual, salario * 1.2 as salario_aumento from funcionario;
+select salario, nome_funcionario from funcionario;
+
+/5.b/
+
+update cliente set email_cliente = 'jose_novoemail@gmail.com' where codigo_cliente = 1;
+
