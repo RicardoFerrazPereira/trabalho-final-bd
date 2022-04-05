@@ -32,7 +32,7 @@ inner join cliente
 on(cliente.codigo_cliente = pedido.codigo_cliente)
 order by nome 
 
-/*bônus*/
+/*bï¿½nus*/
 select count(codigo_pedido) as quantidade_pedido, nome, sobrenome from pedido
 	inner join cliente 
 	on(pedido.codigo_cliente = cliente.codigo_cliente)
