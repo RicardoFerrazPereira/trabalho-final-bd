@@ -25,6 +25,13 @@ inner join cliente
 on(pedido.codigo_cliente = cliente.codigo_cliente);
 --where pedido.codigo_pedido = 1,2,3...
 
+/*bonus*/
+select count(codigo_pedido) as quantidade_pedido, nome, sobrenome from pedido
+	inner join cliente 
+	on(pedido.codigo_cliente = cliente.codigo_cliente)
+group by nome, sobrenome
+order by nome, sobrenome asc;
+
 /*5.d*/
 
 select codigo_pedido, nome, sobrenome from pedido 
@@ -47,14 +54,13 @@ full join funcionario
 on(produto.codigo_funcionario = funcionario.codigo_funcionario)
 
 
-/*bonus*/
-select count(codigo_pedido) as quantidade_pedido, nome, sobrenome from pedido
-	inner join cliente 
-	on(pedido.codigo_cliente = cliente.codigo_cliente)
-group by nome, sobrenome
-order by nome, sobrenome asc;
 
+/*5.a*/
+update funcionario set salario= (salario + 500);
 
+--extra
+select nome_funcionario, salario from funcionario where salario between 3000 and 4500;
+select nome_funcionario, salario from funcionario where salario not between 3000 and 4500;
 /*bonus*/
 select nome_funcionario, salario 
 from funcionario 
@@ -62,11 +68,11 @@ order by salario desc
 limit 3
 offset 1;
 
-/bonus/
+/*bonus*/
 select nome_funcionario, salario as salario_atual, salario * 1.2 as salario_aumento from funcionario;
 select salario, nome_funcionario from funcionario;
 
-/5.b/
+/*5.b*/
 
 update cliente set email_cliente = 'jose_novoemail@gmail.com' where codigo_cliente = 1;
 
