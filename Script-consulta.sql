@@ -32,7 +32,22 @@ inner join cliente
 on(cliente.codigo_cliente = pedido.codigo_cliente)
 order by nome 
 
-/*b�nus*/
+/*5.e*/
+
+select nome, sobrenome, rua, bairro, ddd_principal, telefone_principal from cliente 
+inner join endereco_cliente ec 
+on(ec.codigo_endereco = cliente.codigo_cliente)
+inner join telefone_cliente tc 
+on(tc.codigo_telefone = cliente.codigo_telefone)
+
+
+/*5.f*/
+select nome_produto, nome_funcionario from produto
+full join funcionario 
+on(produto.codigo_funcionario = funcionario.codigo_funcionario)
+
+
+/*bonus*/
 select count(codigo_pedido) as quantidade_pedido, nome, sobrenome from pedido
 	inner join cliente 
 	on(pedido.codigo_cliente = cliente.codigo_cliente)
